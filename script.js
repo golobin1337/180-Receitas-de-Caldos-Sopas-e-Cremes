@@ -1,5 +1,5 @@
 // Timer countdown
-let totalSecs = 23 * 60 + 47;
+let totalSecs = 20 * 60;
 
 function updateTimer() {
   const m = Math.floor(totalSecs / 60);
