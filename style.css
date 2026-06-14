@@ -598,6 +598,8 @@ body {
   padding: 5px 0;
 }
 .plano-itens li .ok { color: var(--verde-check); font-weight: 700; }
+.plano-itens li.item-bloqueado { color: #bbb; text-decoration: line-through; opacity: 0.7; }
+.plano-itens li.item-bloqueado .x-icon { color: #e05252; font-weight: 700; text-decoration: none; display: inline-block; }
 .plano-preco { margin-bottom: 20px; }
 .plano-preco .de { font-size: 14px; color: #aaa; text-decoration: line-through; }
 .plano-preco .badge-perc {
