@@ -507,6 +507,13 @@ body {
   transition: background 0.2s;
 }
 .bonus-card:hover { background: rgba(255,255,255,0.11); }
+.bonus-img {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
 .bonus-num {
   width: 44px; height: 44px;
   background: var(--laranja);
