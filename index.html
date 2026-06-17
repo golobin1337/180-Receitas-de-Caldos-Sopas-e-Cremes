@@ -3,35 +3,40 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#2C1A0E">
 <title>O Sabor que o Frio Pedia</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Preconnect para fontes (elimina latência de DNS/TLS) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<!-- Hero image preload (melhora LCP) -->
+<link rel="preload" as="image" href="public/hero.jpg">
+
+<!-- Fontes não-bloqueantes (elimina render-blocking) -->
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600;700&display=swap"></noscript>
+
 <link rel="stylesheet" href="style.css">
 
-<script
-  src="https://cdn.utmify.com.br/scripts/utms/latest.js"
-  data-utmify-prevent-xcod-sck
-  data-utmify-prevent-subids
-  data-utmify-ignore-iframe
-  data-utmify-is-cartpanda
-  async
-  defer
-></script>
+<!-- UTMify: async + defer já aplicados -->
+<script src="https://cdn.utmify.com.br/scripts/utms/latest.js" data-utmify-prevent-xcod-sck data-utmify-prevent-subids data-utmify-ignore-iframe data-utmify-is-cartpanda async defer></script>
 
-<script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "x7z4b33n5z");
-</script>
-
+<!-- Clarity e Pixel: carregam só após o load para não bloquear LCP -->
 <script>
-  window.pixelId = "6a31f937e3aa89b3388871a6";
-  var a = document.createElement("script");
-  a.setAttribute("async", "");
-  a.setAttribute("defer", "");
-  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
-  document.head.appendChild(a);
+  window.addEventListener('load', function() {
+    (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "x7z4b33n5z");
+
+    window.pixelId = "6a31f937e3aa89b3388871a6";
+    var a = document.createElement("script");
+    a.setAttribute("async", "");
+    a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+    document.head.appendChild(a);
+  });
 </script>
 
 </head>
@@ -56,7 +61,7 @@
     <span class="pilar"><span class="dot">✦</span> Acesso imediato</span>
   </div>
   <div class="hero-img-wrap">
-    <img src="public/hero.jpg" alt="180 Receitas de Caldos, Sopas e Cremes" style="width:100%;border-radius:20px;display:block;">
+    <img src="public/hero.jpg" alt="180 Receitas de Caldos, Sopas e Cremes" style="width:100%;border-radius:20px;display:block;" fetchpriority="high" decoding="sync">
     <div class="badge-desconto">-80% HOJE</div>
   </div>
   <div class="social-proof">
@@ -151,14 +156,14 @@
   <div class="divider" style="margin-bottom:10px"></div>
   <p class="sec-sub">Mais de 180 caldos, sopas e cremes perfeitos para os dias frios!</p>
   <div class="receitas-grid">
-    <div class="receita-card"><img class="receita-img" src="public/imgs/caldoverde.jpg" alt="Caldo Verde Tradicional"><div class="receita-info"><div class="nome">Caldo Verde Tradicional</div><div class="cal">180 cal</div></div></div>
-    <div class="receita-card"><img class="receita-img" src="public/imgs/cremedeabobora.jpg" alt="Creme de Abóbora com Gengibre"><div class="receita-info"><div class="nome">Creme de Abóbora com Gengibre</div><div class="cal">150 cal</div></div></div>
-    <div class="receita-card"><img class="receita-img" src="public/imgs/caldodefrango.jpg" alt="Caldo de Frango com Legumes"><div class="receita-info"><div class="nome">Caldo de Frango com Legumes</div><div class="cal">220 cal</div></div></div>
-    <div class="receita-card"><img class="receita-img" src="public/imgs/sopacremosa.jpg" alt="Sopa Cremosa de Mandioquinha"><div class="receita-info"><div class="nome">Sopa Cremosa de Mandioquinha</div><div class="cal">190 cal</div></div></div>
-    <div class="receita-card"><img class="receita-img" src="public/imgs/caldodefeijao.jpg" alt="Caldo de Feijão Especial"><div class="receita-info"><div class="nome">Caldo de Feijão Especial</div><div class="cal">250 cal</div></div></div>
-    <div class="receita-card"><img class="receita-img" src="public/imgs/cremedemilho.jpg" alt="Creme de Milho com Bacon"><div class="receita-info"><div class="nome">Creme de Milho com Bacon</div><div class="cal">210 cal</div></div></div>
-    <div class="receita-card"><img class="receita-img" src="public/imgs/caldodecostela.jpg" alt="Caldo de Costela Defumada"><div class="receita-info"><div class="nome">Caldo de Costela Defumada</div><div class="cal">280 cal</div></div></div>
-    <div class="receita-card"><img class="receita-img" src="public/imgs/sopadetox.jpg" alt="Sopa Detox de Legumes"><div class="receita-info"><div class="nome">Sopa Detox de Legumes</div><div class="cal">120 cal</div></div></div>
+    <div class="receita-card"><img class="receita-img" loading="lazy" decoding="async" src="public/imgs/caldoverde.jpg" alt="Caldo Verde Tradicional"><div class="receita-info"><div class="nome">Caldo Verde Tradicional</div><div class="cal">180 cal</div></div></div>
+    <div class="receita-card"><img class="receita-img" loading="lazy" decoding="async" src="public/imgs/cremedeabobora.jpg" alt="Creme de Abóbora com Gengibre"><div class="receita-info"><div class="nome">Creme de Abóbora com Gengibre</div><div class="cal">150 cal</div></div></div>
+    <div class="receita-card"><img class="receita-img" loading="lazy" decoding="async" src="public/imgs/caldodefrango.jpg" alt="Caldo de Frango com Legumes"><div class="receita-info"><div class="nome">Caldo de Frango com Legumes</div><div class="cal">220 cal</div></div></div>
+    <div class="receita-card"><img class="receita-img" loading="lazy" decoding="async" src="public/imgs/sopacremosa.jpg" alt="Sopa Cremosa de Mandioquinha"><div class="receita-info"><div class="nome">Sopa Cremosa de Mandioquinha</div><div class="cal">190 cal</div></div></div>
+    <div class="receita-card"><img class="receita-img" loading="lazy" decoding="async" src="public/imgs/caldodefeijao.jpg" alt="Caldo de Feijão Especial"><div class="receita-info"><div class="nome">Caldo de Feijão Especial</div><div class="cal">250 cal</div></div></div>
+    <div class="receita-card"><img class="receita-img" loading="lazy" decoding="async" src="public/imgs/cremedemilho.jpg" alt="Creme de Milho com Bacon"><div class="receita-info"><div class="nome">Creme de Milho com Bacon</div><div class="cal">210 cal</div></div></div>
+    <div class="receita-card"><img class="receita-img" loading="lazy" decoding="async" src="public/imgs/caldodecostela.jpg" alt="Caldo de Costela Defumada"><div class="receita-info"><div class="nome">Caldo de Costela Defumada</div><div class="cal">280 cal</div></div></div>
+    <div class="receita-card"><img class="receita-img" loading="lazy" decoding="async" src="public/imgs/sopadetox.jpg" alt="Sopa Detox de Legumes"><div class="receita-info"><div class="nome">Sopa Detox de Legumes</div><div class="cal">120 cal</div></div></div>
   </div>
   <p class="mais-receitas">...e muito mais! 180 caldos, sopas e cremes para aquecer seu inverno.</p>
   <a href="#planos" class="cta-btn">QUERO AS RECEITAS →</a>
@@ -171,7 +176,7 @@
   <p class="sec-sub">4 bônus exclusivos que complementam perfeitamente o guia principal</p>
   <div class="bonus-lista">
     <div class="bonus-card">
-      <img class="bonus-img" src="public/1.jpg" alt="Lista de Compras Inteligente">
+      <img class="bonus-img" loading="lazy" decoding="async" src="public/1.jpg" alt="Lista de Compras Inteligente">
       <div class="bonus-info">
         <h4>Lista de Compras Inteligente</h4>
         <p>Listas de compras semanais prontas, separadas por receita, com quantidade exata dos ingredientes para não desperdiçar nada e economizar na feira.</p>
@@ -179,7 +184,7 @@
       <div class="bonus-preco"><div class="de">R$ 24</div><div class="incluso">Incluso</div></div>
     </div>
     <div class="bonus-card">
-      <img class="bonus-img" src="public/2.jpg" alt="30 Cardápios para Delivery">
+      <img class="bonus-img" loading="lazy" decoding="async" src="public/2.jpg" alt="30 Cardápios para Delivery">
       <div class="bonus-info">
         <h4>30 Cardápios para Delivery</h4>
         <p>Cardápios semanais montados para você começar a vender caldos hoje, sem precisar planejar nada do zero.</p>
@@ -187,7 +192,7 @@
       <div class="bonus-preco"><div class="de">R$ 19</div><div class="incluso">Incluso</div></div>
     </div>
     <div class="bonus-card">
-      <img class="bonus-img" src="public/3.jpg" alt="Guia de Temperos Artesanais">
+      <img class="bonus-img" loading="lazy" decoding="async" src="public/3.jpg" alt="Guia de Temperos Artesanais">
       <div class="bonus-info">
         <h4>Guia de Temperos Artesanais</h4>
         <p>25 temperos caseiros para potencializar o sabor dos seus caldos e sopas. Clientes vão pedir a receita.</p>
@@ -195,7 +200,7 @@
       <div class="bonus-preco"><div class="de">R$ 15</div><div class="incluso">Incluso</div></div>
     </div>
     <div class="bonus-card">
-      <img class="bonus-img" src="public/4.jpg" alt="Manual de Congelamento Inteligente">
+      <img class="bonus-img" loading="lazy" decoding="async" src="public/4.jpg" alt="Manual de Congelamento Inteligente">
       <div class="bonus-info">
         <h4>Manual de Congelamento Inteligente</h4>
         <p>Como congelar, embalar e conservar caldos por até 3 meses sem perder sabor. Perfeito para marmitas e delivery.</p>
@@ -355,6 +360,6 @@
   © 2026 O Sabor do Frio · Todos os direitos reservados · Política de Privacidade
 </footer>
 
-<script src="script.js"></script>
+<script src="script.js" defer></script>
 </body>
 </html>

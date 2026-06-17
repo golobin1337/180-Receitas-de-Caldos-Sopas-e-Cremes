@@ -112,6 +112,7 @@ body {
   width: 100%;
   border-radius: var(--radius-lg);
   display: block;
+  aspect-ratio: 4/3;
 }
 .badge-desconto {
   position: absolute;
@@ -456,6 +457,7 @@ body {
   height: 120px;
   object-fit: cover;
   display: block;
+  aspect-ratio: 4/3;
 }
 .receita-info { padding: 10px 12px; }
 .receita-info .nome { font-size: 13px; font-weight: 600; color: var(--texto); line-height: 1.3; }
