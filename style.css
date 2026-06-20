@@ -870,3 +870,272 @@ footer {
   .receitas-grid { grid-template-columns: 1fr; }
   .numeros-trio { flex-direction: column; gap: 8px; }
 }
+
+/* ============================================================
+   NOVO LAYOUT DE PREÇO (pacote card)
+   ============================================================ */
+.planos-section {
+  background: var(--creme);
+  padding: 56px 20px;
+  text-align: center;
+}
+.oferta-pill {
+  display: inline-block;
+  background: rgba(212,82,10,0.1);
+  color: var(--laranja);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 6px 16px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+.oferta-titulo {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(28px, 6vw, 44px);
+  font-weight: 900;
+  color: var(--texto);
+  line-height: 1.15;
+  margin-bottom: 14px;
+}
+.oferta-menos {
+  color: var(--laranja);
+  font-style: italic;
+}
+.oferta-sub {
+  font-size: 15px;
+  color: var(--texto-medio);
+  line-height: 1.6;
+  max-width: 480px;
+  margin: 0 auto 36px;
+}
+
+/* Card principal */
+.pacote-card {
+  max-width: 480px;
+  margin: 0 auto;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 12px 48px rgba(0,0,0,0.15);
+}
+
+/* Cabeçalho escuro */
+.pacote-header {
+  background: var(--marrom);
+  padding: 28px 24px 24px;
+  text-align: center;
+}
+.pacote-voce-recebe {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  color: rgba(255,255,255,0.5);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.pacote-nome {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 4px;
+}
+.pacote-produto {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  font-style: italic;
+  color: var(--dourado);
+}
+
+/* Lista de itens */
+.pacote-itens {
+  background: white;
+  padding: 0 20px;
+}
+.pacote-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.07);
+}
+.pacote-item:last-child { border-bottom: none; }
+
+.item-badge {
+  width: 34px; height: 34px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 11px;
+  font-weight: 800;
+  color: white;
+}
+.item-badge-dark { background: var(--marrom); }
+.item-badge-laranja { background: var(--laranja); }
+
+.item-info { flex: 1; text-align: left; min-width: 0; }
+.item-info h5 {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--texto);
+  margin: 0 0 2px;
+  line-height: 1.3;
+}
+.item-info small {
+  font-size: 11px;
+  color: #999;
+}
+
+.item-preco {
+  flex-shrink: 0;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+}
+.item-riscado {
+  font-size: 12px;
+  color: #bbb;
+  text-decoration: line-through;
+  white-space: nowrap;
+}
+.item-gratis {
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 700;
+  color: var(--laranja);
+}
+
+/* Total */
+.pacote-total {
+  background: white;
+  padding: 14px 20px 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1.5px dashed #ddd;
+}
+.total-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #aaa;
+}
+.total-valor {
+  font-size: 22px;
+  font-weight: 900;
+  color: #bbb;
+  text-decoration: line-through;
+}
+
+/* Área CTA escura */
+.pacote-cta-area {
+  background: var(--marrom);
+  padding: 28px 24px 24px;
+  text-align: center;
+}
+.oferta-hoje-tag {
+  display: inline-block;
+  background: var(--laranja);
+  color: white;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 7px 20px;
+  border-radius: 50px;
+  margin-bottom: 20px;
+}
+.pacote-preco-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: rgba(255,255,255,0.5);
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+.pacote-preco-big {
+  font-family: 'Playfair Display', serif;
+  font-size: 64px;
+  font-weight: 900;
+  color: white;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+.pp-cifrao { font-size: 28px; vertical-align: super; }
+.pp-centavos { font-size: 36px; }
+
+.economia-tag {
+  display: inline-block;
+  background: rgba(46,125,50,0.25);
+  border: 1px solid rgba(46,125,50,0.5);
+  color: #6fcf6f;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 18px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+.economia-tag strong { color: #8de88d; }
+
+.pacote-cta-btn {
+  display: block;
+  width: 100%;
+  background: var(--laranja);
+  color: white;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  padding: 18px;
+  border-radius: 50px;
+  text-decoration: none;
+  text-align: center;
+  box-shadow: 0 6px 24px rgba(212,82,10,0.45);
+  transition: transform 0.2s, box-shadow 0.2s;
+  margin-bottom: 20px;
+}
+.pacote-cta-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(212,82,10,0.55); }
+
+.pacote-trust-row {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: rgba(255,255,255,0.45);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.pacote-pagamento {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: rgba(255,255,255,0.35);
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.pag-tag {
+  background: rgba(255,255,255,0.12);
+  color: rgba(255,255,255,0.6);
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 480px) {
+  .pacote-preco-big { font-size: 52px; }
+  .pacote-trust-row { gap: 8px; font-size: 9px; }
+  .item-info h5 { font-size: 12px; }
+}
